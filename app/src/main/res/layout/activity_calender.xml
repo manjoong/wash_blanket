@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="CalendarListBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.washing_blanket_prd.washing_blanket.viewmodel.CalendarListViewModel" />
+        <variable
+            name="activity"
+            type="com.washing_blanket_prd.washing_blanket.CalenderActivity" />
+    </data>
+
+<LinearLayout
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--달력뷰-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pager_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/add_blanket_btn"
+            android:tint="@color/colorPrimary"
+            android:background="@color/transparent"
+            android:layout_gravity="bottom|right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/add"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:onClick="@{activity::btnClick}">
+
+        </ImageButton>
+    </FrameLayout>
+</LinearLayout>
+
+
+</layout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8">
+            <ImageButton
+                android:id="@+id/complate_info"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/check_blue"
+                android:background="@color/transparent"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+            </ImageButton>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5">
+
+            <EditText
+                android:id="@+id/blanket_name"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/edit_text_border"
+                android:textColorHint="#AEAEAE"
+                android:layout_width="match_parent"
+                android:textSize="30dp"
+                android:layout_height="50dp"
+                android:hint="이불 이름">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:fontFamily="@font/bmdohyon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:text="아이콘 설정"></TextView>
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/no_image"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/x"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/bed"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/bed"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/small_sofa"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/small_sofa"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/big_sofa"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/big_sofa"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/curtain"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/curtain"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/chair"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/chair"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/table"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/table"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/pillow"
+                        android:background="@color/transparent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/pillow"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp">
+                    </ImageButton>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <TextView
+                android:fontFamily="@font/bmdohyon"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="세탁 주기 설정">
+
+            </TextView>
+
+            <SeekBar
+                android:progress="30"
+                android:id="@+id/period_seekbar"
+                android:thumb="@drawable/seeker_thumb"
+                android:layout_marginTop="10dp"
+                android:max="90"
+                android:min="1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+
+            <TextView
+                android:id="@+id/period_text"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bmdohyon"
+                android:text="30일"
+                android:textSize="25dp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.7">
+            <TextView
+                android:fontFamily="@font/bmdohyon"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 세탁하셨나요?">
+            </TextView>
+            <CheckBox
+                android:id="@+id/washed_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></CheckBox>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
